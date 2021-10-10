@@ -12,12 +12,14 @@ data <- dplyr::tibble(
   url = c(
     "https://en.wikipedia.org/wiki/European_Council",
     "https://en.wikipedia.org/wiki/Council_of_the_European_Union",
+    "https://en.wikipedia.org/wiki/European_Parliament",
     "https://en.wikipedia.org/wiki/European_Commission",
     "https://en.wikipedia.org/wiki/Court_of_Justice_of_the_European_Union"
   ),
   file = c(
     "european-council.html",
     "council-of-the-european-union.html",
+    "european-parliament.html",
     "european-commission.html",
     "court-of-justice-of-the-european-union.html"
   )
