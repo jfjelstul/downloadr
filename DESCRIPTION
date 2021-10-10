@@ -1,12 +1,12 @@
 Package: downloadr
-Title: Tools for Downloading Files
+Title: An R Function for Downloading Files
 Version: 0.1.0.9000
 Authors@R: person(given = "Joshua C.",
            family = "Fjelstul",
            role = c("aut", "cre"),
            email = "joshfjelstul@gmail.com",
            comment = c(ORCID = "0000-0002-9494-260X"))
-Description: This package includes easy-to-use tools for downloading files. 
+Description: This package includes an easy-to-use R function for downloading files. 
 URL: https://github.com/jfjelstul/downloadr
 Date: 2021-10-10
 License: MIT + file LICENSE
