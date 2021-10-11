@@ -5,7 +5,7 @@
 
 If you're going to be extracting data from a website, it's always best, for replicability, to download the source `HTML`. Also, you might realize later that you need to redo something (maybe your parsing code didn't do work the way you expacted, or you realize you need to extract additional information), and you don't want to tax the site's servers by requesting all of the `HTML` pages again. 
 
-`download_files()` is a wrapper around the base `R` function `download.file()` that adds some very useful functionality. `download_files()` has several nice features:
+`download_files()` is a wrapper around the base `R` function `download.file()` that adds some very useful functionality. `download_files()` has three key features:
 
 - It's vectorized. You give it a list of URLs and a corresponding list of file names, and it will download all of the files without you having to write a loop. 
 - It checks to see if you've already downloaded any of the files. If you're downloading a lot of files, you might need to stop and restart your code before it finishes. If you're running a loop, you have to figure out where to start again, which is annoying. `download_files` looks in the folder you're saving the files to and checks to see if you've already downloaded any of them. Unless you tell it otherwise, it'll skip the ones you've already done. When you run it, it'll tell you how many you've already download and how many are left to download. 
@@ -43,7 +43,7 @@ The `BibTeX` entry for the package is:
 
 If you notice an error in the data or a bug in the `R` package, please report it [here](https://github.com/jfjelstul/downloadr/issues).
 
-## Example: Downloading pages from Wikipedia
+## Example: Downloading Pages from Wikipedia
 
 The `download_files()` function is extremely easy to use. First, let's make some example data. We'll make a `tibble` with two variables: one called `url` that has the URL address for five Wikipedia articles about the major EU institutions and another called `file` that has a file name to each for each downloaded `HTML` file. 
 
