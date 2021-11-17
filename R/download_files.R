@@ -3,7 +3,7 @@
 # downloadr R package
 ###############################################################################
 
-download_files <- function(urls, files, delay_min = 3, delay_max = 5, folder_path = "") {
+download_files <- function(urls, files, delay_min = 3, delay_max = 5, folder_path = "", method = "auto", mode = "w") {
 
   # validate "urls"
   if(class(urls) != "character") {
@@ -83,7 +83,7 @@ download_files <- function(urls, files, delay_min = 3, delay_max = 5, folder_pat
       cat(message)
 
       # download the HTML page
-      try(suppressWarnings(download.file(data$url[i], stringr::str_c(folder_path, data$file[i]), quiet = TRUE)))
+      try(suppressWarnings(download.file(data$url[i], stringr::str_c(folder_path, data$file[i]), quiet = TRUE, method = method, mode = mode)))
 
       # random pause
       Sys.sleep(runif(1, delay_min, delay_max))
